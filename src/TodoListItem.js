@@ -1,6 +1,7 @@
 //reuseable component
+import './TodoListItem.css'
 const TodoListItem =(props)=>{
-    return <div key={props.tempTodo.id}>
+    return <div id='todolistitem' key={props.tempTodo.id}>
     {
     props.tempTodo.completed===true ?       // using turney operator ( condition ? if execurtion : else execution)
     <><input type='checkbox'  onChange={()=>props.checkedChange(props.tempTodo.id)} checked/> <s>{props.tempTodo.title}</s></> :
